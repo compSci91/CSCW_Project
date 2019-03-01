@@ -32,17 +32,6 @@ class UserDB(database.Database):
 	def __del__(self):
 		super().__del__()
 
-	def find_user_email(self, email):
-		cur = self.db_conn.cursor()
-		cur.execute("SELECT email, name, pwd, type_id, id FROM user WHERE email=?", (email,))
-		rows = cur.fetchall()
-
-		if not rows:
-			return None
-		else:
-			user = User(rows[0][0], rows[0][1], rows[0][2], rows[0][3], rows[0][4])
-			return user
-
 	def create_user(self, user):
 		param = (user.get_email(), user.get_name(), user.get_pwd(), user.get_type_id())
 		sql = '''INSERT INTO user (email, name, pwd, type_id) values (?,?,?,?)'''
@@ -52,6 +41,18 @@ class UserDB(database.Database):
 			cur.execute(sql, param)
 			return cur.lastrowid
 
+	def find_user_by_email(self, email):
+		cur = self.db_conn.cursor()
+		cur.execute("SELECT email, name, pwd, type_id, id_user FROM user WHERE email=?", (email,))
+		rows = cur.fetchall()
+
+		if not rows:
+			return None
+		else:
+			user = User(rows[0][0], rows[0][1], rows[0][2], rows[0][3], rows[0][4])
+			return user
+
+
 
 """ Test 
 if __name__ == '__main__':
@@ -59,7 +60,7 @@ if __name__ == '__main__':
 	user = User("rafa@rafa.com", "Rafa", "pass", 1)
 
 	print (db.create_user(user))
-	print (db.find_user_email("rafa@rafa.com").get_pwd())
+	print (db.find_user_by_email("rafa@rafa.com").get_pwd())
 
 	del db
 """
