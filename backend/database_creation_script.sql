@@ -22,7 +22,7 @@ CREATE TABLE Project (
 );
 
 CREATE TABLE Status (
-	id_status integer PRIMARY KEY AUTOINCREMENT,
+	id_status integer,
 	name string,
 	desc string
 );

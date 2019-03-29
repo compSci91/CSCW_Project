@@ -58,7 +58,7 @@ class ProjectDB(database.Database):
 		else:
 			projects = []
 			for row in rows:
-				project = Project(rows[0][0], rows[0][1], rows[0][2], rows[0][3])
+				project = Project(row[0], row[1], row[2], row[3])
 				projects.append(project)
 			return projects
 
