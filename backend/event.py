@@ -49,7 +49,7 @@ class EventDB(database.Database):
 
 	def find_project_currently_status(self, project_id):
 		cur = self.db_conn.cursor()
-		cur.execute("SELECT status_id, project_id, date FROM events WHERE project_id=? ORDER BY date DESC", (project_id,))
+		cur.execute("SELECT status_id, project_id, date FROM events WHERE project_id=? ORDER BY date DESC LIMIT 1", (project_id,))
 		rows = cur.fetchall()
 
 		if not rows:

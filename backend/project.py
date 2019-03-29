@@ -39,7 +39,7 @@ class ProjectDB(database.Database):
 
 	def find_project_by_name(self, name):
 		cur = self.db_conn.cursor()
-		cur.execute("SELECT name, desc, file_path, id_project FROM project WHERE name=?", (name,))
+		cur.execute("SELECT name, desc, file_path, id_project FROM project WHERE name=? LIMIT 1", (name,))
 		rows = cur.fetchall()
 
 		if not rows:

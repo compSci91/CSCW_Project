@@ -11,6 +11,7 @@ CREATE TABLE User (
 	name string,
 	email string,
 	pwd string,
+	is_active integer DEFAULT 1, /* Only 0 or 1 */
 	FOREIGN KEY(type_id) REFERENCES User_Type(id_type)
 );
 
