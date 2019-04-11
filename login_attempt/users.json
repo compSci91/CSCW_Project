@@ -1,0 +1,26 @@
+[
+  {
+    "model": "focal.FocalUser",
+    "pk": 1,
+    "fields": {
+      "username": "kate@tamu.edu",
+      "email": "kate@tamu.edu",
+      "password": "password",
+      "first_name": "Kate",
+      "last_name": "Catalen",
+      "user_id": ,
+      "type_id": ,
+      "is_active": "True" 
+    }
+  },
+  {
+    "model": "myapp.person",
+    "pk": 2,
+    "fields": {
+      "first_name": "Paul",
+      "last_name": "McCartney"
+    }
+    
+  }
+
+  
