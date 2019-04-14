@@ -1,0 +1,19 @@
+[
+  {
+    "model": "focal_login.FocalUser",
+    "pk": 1,
+    "fields": {
+      "username": "kate@tamu.edu",
+      "email": "kate@tamu.edu",
+      "password": "password",
+      "first_name": "Kate",
+      "last_name": "Catalena",
+      "userID": 2,
+      "type_id": 2,
+      "is_active": "True" 
+    }
+  }
+    
+]
+
+  
