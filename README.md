@@ -20,3 +20,10 @@ python3 manage.py migrations
 python3 manage.py runserver
 
 ```
+Users currently in DB for login
+
+username: kate@tamu.edu
+password: password
+
+username: admin@tamu.edu
+password: admin
