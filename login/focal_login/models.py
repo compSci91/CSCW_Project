@@ -11,17 +11,7 @@ class FocalUser(models.Model):
 	type_id = CharField(max_length=50)
 	is_active = BooleanField()
 
-	def __init__(self, username, email, password, first_name, last_name, userID,  type_id, is_active):
-			self.username = username		
-			self.email = email
-			self.password = password
-			self.first_name = first_name
-			self.last_name = last_name
-			self.userID = userID
-			self.type_id = type_id
-			self.is_active = is_active
-
-	def get_username(self):
+	'''def get_username(self):
 			return self.username
 			
 	def get_email(self):
@@ -43,7 +33,7 @@ class FocalUser(models.Model):
 		return self.type_id
 
 	def get_is_active(self):
-		return self.is_active
+		return self.is_active'''
 
 class Event(models.Model):
 	def __init__(self, status_id, project_id, datetime=None):
