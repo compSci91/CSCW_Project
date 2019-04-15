@@ -6,17 +6,17 @@ In the root folder:
 ```bash
 pipenv install
 pipenv shell
-cd microblog/front-end
+cd focal_login/front-end
 npm install
 ng build
 cd ../..
-python manage.py runserver
+python3 manage.py runserver
 ```
 
 When you make changes to a db make sure to 
 
 ```bash
-python manage.py migrations
-python manage.py runserver
+python3 manage.py migrations
+python3 manage.py runserver
 
 ```
