@@ -22,8 +22,8 @@ python3 manage.py runserver
 ```
 Users currently in DB for login
 
-username: kate@tamu.edu
-password: password
+username: content@content.com
+password: pwd
 
-username: admin@tamu.edu
+username: admin@admin.com
 password: admin
