@@ -1,0 +1,58 @@
+[
+{
+    "model": "auth.user",
+    "pk": 1,
+    "fields": {
+        "password": "pbkdf2_sha256$120000$V2isoXl1Q88l$sVuB+25I6UNNLY76Ti0EixAu/Ucimqi7rFpbadDzqzc=",
+        "last_login": null,
+        "is_superuser": true,
+        "username": "admin@admin.com",
+        "first_name": "Admin",
+        "last_name": "User",
+        "email": "admin@admin.com",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2019-04-16T00:16:13.252Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "focal_login.FocalUser",
+    "pk": 1,
+    "fields": {
+      "user": 1,
+      "userID": 2,
+      "type_id": 2,
+      "is_active": "True" 
+    }
+  },
+{
+    "model": "auth.user",
+    "pk": 2,
+    "fields": {
+        "password": "pbkdf2_sha256$120000$6YHv5JMayFnN$+Y2TqedyjZq02kEw/0ZaXtyigzaH2+BRUIqqkSeAG90=",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "content@content.com",
+        "first_name": "Content",
+        "last_name": "Manager",
+        "email": "content@content.com",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2019-04-16T00:19:01.130Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "focal_login.FocalUser",
+    "pk": 2,
+    "fields": {
+      "user": 2,
+      "userID": 2,
+      "type_id": 2,
+      "is_active": "True" 
+    }
+  }
+]

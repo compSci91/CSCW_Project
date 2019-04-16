@@ -71,5 +71,4 @@ export class UserService {
     this.token_expires = new Date(token_decoded.exp * 1000);
     this.username = token_decoded.username;
   }
-
 }
