@@ -1,0 +1,45 @@
+<mat-card>
+  <mat-card-content>
+    <h2 class="example-h2">Team Approvals</h2>
+
+    <section class="example-section">
+      <label class="example-margin">Coordinator:</label>
+      <mat-radio-group [(ngModel)]="coordinator">
+        <mat-radio-button class="example-margin" value="approved">Approve</mat-radio-button>
+        <mat-radio-button class="example-margin" value="improvements">Need's Improvement</mat-radio-button>
+      </mat-radio-group>
+    </section>
+
+    <section class="example-section">
+      <label class="example-margin">Professor:</label>
+      <mat-radio-group [(ngModel)]="professor">
+        <mat-radio-button class="example-margin" value="approved">Approve</mat-radio-button>
+        <mat-radio-button class="example-margin" value="improvements">Need's Improvement</mat-radio-button>
+      </mat-radio-group>
+    </section>
+
+    <section class="example-section">
+      <label class="example-margin">Media Crew:</label>
+      <mat-radio-group [(ngModel)]="media">
+        <mat-radio-button class="example-margin" value="approved">Approve</mat-radio-button>
+        <mat-radio-button class="example-margin" value="improvements">Need's Improvement</mat-radio-button>
+      </mat-radio-group>
+    </section>
+
+    <section class="example-section">
+      <label class="example-margin">Department Rep:</label>
+      <mat-radio-group [(ngModel)]="department">
+        <mat-radio-button class="example-margin" value="approved">Approve</mat-radio-button>
+        <mat-radio-button class="example-margin" value="improvements">Need's Improvement</mat-radio-button>
+      </mat-radio-group>
+    </section>
+
+  </mat-card-content>
+</mat-card>
+
+
+
+
+<!-- Copyright 2019 Google Inc. All Rights Reserved.
+    Use of this source code is governed by an MIT-style license that
+    can be found in the LICENSE file at http://angular.io/license -->
