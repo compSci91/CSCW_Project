@@ -1,4 +1,25 @@
-<base href="/">
+<!-- <base href="/"> -->
 <h3>
-    <button mat-raised-button (click)="openDialog()">Create New Lesson</button>
+  Course Name
 </h3>
+
+<table>
+  <tr>
+    <th>Module Name</th>
+    <th>Storyboard</th>
+    <th>Filming</th>
+    <th>Audio</th>
+    <th>Production</th>
+    <th>Aggregation</th>
+    <th>Final Review</th>
+  </tr>
+  <tr *ngFor="let module of modules">
+    <td>{{module.name}}</td>
+    <td>{{module.storyboard_completed}}</td>
+    <td>{{module.filming_complete}}</td>
+    <td>{{module.audio_complete}}</td>
+    <td>{{module.production_complete}}</td>
+    <td>{{module.aggregation_complete}}</td>
+    <td>{{module.final_review_complete}}</td>
+  </tr>
+</table>

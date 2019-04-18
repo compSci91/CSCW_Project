@@ -19,6 +19,7 @@ import { MainpageComponent } from './mainpage/mainpage.component';
 //import {MatCardContent} from '@angular/material'
 const appRoutes: Routes = [
   { path: 'lesson-list', component: LessonComponent},
+  { path: 'main-page', component: MainpageComponent}
 ];
 
 @NgModule({
