@@ -1,26 +1,29 @@
 <!-- <base href="/"> -->
-<h3>
-{{courses[0].name}}</h3>
+<div *ngFor="let course of courses">
+  <h3>{{course.name}}</h3>
 
-<table>
-  <tr>
-    <th>Module Name</th>
-    <th>Storyboard</th>
-    <th>Filming</th>
-    <th>Audio</th>
-    <th>Production</th>
-    <th>Aggregation</th>
-    <th>Final Review</th>
-  </tr>
-  <tr *ngFor="let module of courses[0].modules">
-    <td>{{module.name}}</td>
-    <!-- [ngStyle]="yourText=='INVALID'?{'background-color':'red'} : {'background-color': 'white'}" -->
+  <table>
+    <tr>
+      <th>Module Name</th>
+      <th>Storyboard</th>
+      <th>Filming</th>
+      <th>Audio</th>
+      <th>Production</th>
+      <th>Aggregation</th>
+      <th>Final Review</th>
+    </tr>
+    <tr *ngFor="let module of course.modules">
+      <td>{{module.name}}</td>
+      <!-- [ngStyle]="yourText=='INVALID'?{'background-color':'red'} : {'background-color': 'white'}" -->
 
-    <td [ngStyle]="module.storyboard_completed ? {'background-color' : 'chartreuse'} : {'background-color' : 'red'}">{{module.storyboard_completed}}</td>
-    <td [ngStyle]="module.filming_complete ? {'background-color' : 'chartreuse'} : {'background-color' : 'red'}">{{module.filming_complete}}</td>
-    <td [ngStyle]="module.audio_complete ? {'background-color' : 'chartreuse'} : {'background-color' : 'red'}">{{module.audio_complete}}</td>
-    <td [ngStyle]="module.production_complete ? {'background-color' : 'chartreuse'} : {'background-color' : 'red'}">{{module.production_complete}}</td>
-    <td [ngStyle]="module.aggregation_complete ? {'background-color' : 'chartreuse'} : {'background-color' : 'red'}">{{module.aggregation_complete}}</td>
-    <td [ngStyle]="module.final_review_complete ? {'background-color' : 'chartreuse'} : {'background-color' : 'red'}">{{module.final_review_complete}}</td>
-  </tr>
-</table>
+      <td [ngStyle]="module.storyboard_completed ? {'background-color' : 'chartreuse'} : {'background-color' : 'red'}">{{module.storyboard_completed}}</td>
+      <td [ngStyle]="module.filming_complete ? {'background-color' : 'chartreuse'} : {'background-color' : 'red'}">{{module.filming_complete}}</td>
+      <td [ngStyle]="module.audio_complete ? {'background-color' : 'chartreuse'} : {'background-color' : 'red'}">{{module.audio_complete}}</td>
+      <td [ngStyle]="module.production_complete ? {'background-color' : 'chartreuse'} : {'background-color' : 'red'}">{{module.production_complete}}</td>
+      <td [ngStyle]="module.aggregation_complete ? {'background-color' : 'chartreuse'} : {'background-color' : 'red'}">{{module.aggregation_complete}}</td>
+      <td [ngStyle]="module.final_review_complete ? {'background-color' : 'chartreuse'} : {'background-color' : 'red'}">{{module.final_review_complete}}</td>
+    </tr>
+  </table>
+
+  <br/>
+</div>
