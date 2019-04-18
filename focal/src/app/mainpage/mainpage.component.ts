@@ -33,8 +33,10 @@ export class MainpageComponent implements OnInit {
     lesson2.aggregation_complete = false;
     lesson2.final_review_complete = false;
 
-    cscw.modules.push(lesson1);
-    cscw.modules.push(lesson2);
+      cscw.modules = [lesson1, lesson2]
+
+    // cscw.modules.push(lesson1);
+    // cscw.modules.push(lesson2);
 
     this.courses.push(cscw)
 
