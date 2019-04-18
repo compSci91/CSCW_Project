@@ -1,7 +1,6 @@
 <!-- <base href="/"> -->
 <h3>
-  Course Name
-</h3>
+{{courses[0].name}}</h3>
 
 <table>
   <tr>
@@ -13,7 +12,7 @@
     <th>Aggregation</th>
     <th>Final Review</th>
   </tr>
-  <tr *ngFor="let module of modules">
+  <tr *ngFor="let module of courses[0].modules">
     <td>{{module.name}}</td>
     <!-- [ngStyle]="yourText=='INVALID'?{'background-color':'red'} : {'background-color': 'white'}" -->
 

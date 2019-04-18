@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Module} from '../module';
+import {Course} from '../course'
 
 @Component({
   selector: 'app-mainpage',
@@ -8,32 +9,38 @@ import {Module} from '../module';
 })
 export class MainpageComponent implements OnInit {
 
-  modules = [];
+  courses = []
+  // modules = [];
 
 
 
   update = function(){
-    let cscw = new Module();
-    cscw.name = "Computer Supported Cooperative Work";
-    cscw.storyboard_completed = true;
-    cscw.filming_complete = true;
-    cscw.audio_complete = true;
-    cscw.production_complete = false;
-    cscw.aggregation_complete = false;
-    cscw.final_review_complete = false;
+    let cscw = new Course()
+    cscw.name = "Computer Supported Cooperative Work"
+    cscw.modules = []
 
-    let embodiment = new Module();
-    embodiment.name = "Embodiment and Interaction";
-    embodiment.storyboard_completed = true;
-    embodiment.filming_complete = true;
-    embodiment.audio_complete = false;
-    embodiment.production_complete = false;
-    embodiment.aggregation_complete = false;
-    embodiment.final_review_complete = false;
+    let lesson1 = new Module();
+    lesson1.name = "Lesson 1";
+    lesson1.storyboard_completed = true;
+    lesson1.filming_complete = true;
+    lesson1.audio_complete = true;
+    lesson1.production_complete = false;
+    lesson1.aggregation_complete = false;
+    lesson1.final_review_complete = false;
 
+    let lesson2 = new Module();
+    lesson2.name = "Lesson 2";
+    lesson2.storyboard_completed = true;
+    lesson2.filming_complete = true;
+    lesson2.audio_complete = false;
+    lesson2.production_complete = false;
+    lesson2.aggregation_complete = false;
+    lesson2.final_review_complete = false;
 
-   this.modules.push(cscw);
-   this.modules.push(embodiment);
+    cscw.modules.push(lesson1);
+    cscw.modules.push(lesson2);
+
+    this.courses.push(cscw)
    }
 
   constructor() {
