@@ -15,7 +15,9 @@
   </tr>
   <tr *ngFor="let module of modules">
     <td>{{module.name}}</td>
-    <td>{{module.storyboard_completed}}</td>
+    <!-- [ngStyle]="yourText=='INVALID'?{'background-color':'red'} : {'background-color': 'white'}" -->
+
+    <td [ngStyle]="module.storyboard_completed ? {'background-color' : 'green'} : {'background-color' : 'red'}">{{module.storyboard_completed}}</td>
     <td>{{module.filming_complete}}</td>
     <td>{{module.audio_complete}}</td>
     <td>{{module.production_complete}}</td>
