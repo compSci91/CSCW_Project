@@ -7,9 +7,6 @@
       <th>Lesson Name</th>
       <th>Storyboard</th>
       <th>Filming</th>
-      <th>Audio</th>
-      <th>Production</th>
-      <th>Aggregation</th>
       <th>Final Review</th>
     </tr>
     <tr *ngFor="let module of course.modules">
@@ -18,9 +15,6 @@
 
       <td [ngStyle]="module.storyboard_completed ? {'background-color' : 'chartreuse'} : {'background-color' : 'red'}"></td>
       <td [ngStyle]="module.filming_complete ? {'background-color' : 'chartreuse'} : {'background-color' : 'red'}"></td>
-      <td [ngStyle]="module.audio_complete ? {'background-color' : 'chartreuse'} : {'background-color' : 'red'}"></td>
-      <td [ngStyle]="module.production_complete ? {'background-color' : 'chartreuse'} : {'background-color' : 'red'}"></td>
-      <td [ngStyle]="module.aggregation_complete ? {'background-color' : 'chartreuse'} : {'background-color' : 'red'}"></td>
       <td [ngStyle]="module.final_review_complete ? {'background-color' : 'chartreuse'} : {'background-color' : 'red'}"></td>
     </tr>
   </table>
