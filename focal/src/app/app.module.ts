@@ -16,10 +16,16 @@ import { ReactiveFormsModule} from '@angular/forms';
 import { VgCoreModule } from 'videogular2/core';
 import { VgControlsModule } from 'videogular2/controls';
 import { MainpageComponent } from './mainpage/mainpage.component';
+import { LoginComponent } from './login/login.component';
+
+import { UserService } from './login/user.service';
+import {HttpClient, HttpHeaders, HttpClientModule} from '@angular/common/http';
+
 //import {MatCardContent} from '@angular/material'
-const appRoutes: Routes = [
+const appRoutes: Routes = [ 
   { path: 'lesson-list', component: LessonComponent},
-  { path: 'dashboard', component: MainpageComponent}
+  { path: 'dashboard', component: MainpageComponent},
+  { path: 'login', component: LoginComponent}
 ];
 
 @NgModule({
@@ -29,6 +35,7 @@ const appRoutes: Routes = [
     CheckboxComponent,
     VideoplayerComponent,
     MainpageComponent,
+    LoginComponent,
   ],
   imports: [
     MatCardModule,
@@ -40,12 +47,13 @@ const appRoutes: Routes = [
     VgCoreModule,
     ReactiveFormsModule,
     VgControlsModule,
+    HttpClientModule,
     RouterModule.forRoot(
       appRoutes,
       { enableTracing: true } // <-- debugging purposes only
     )
   ],
-  providers: [],
+  providers: [UserService, HttpClient],
   bootstrap: [AppComponent],
   exports: [
     MatCheckboxModule,
