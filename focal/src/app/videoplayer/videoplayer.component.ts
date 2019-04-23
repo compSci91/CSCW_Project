@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class VideoplayerComponent implements OnInit {
 
+  mediaLink = "http://static.videogular.com/assets/videos/videogular.mp4";
+  mediaType ="video/mp4";
   constructor() { }
 
   ngOnInit() {

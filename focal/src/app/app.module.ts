@@ -17,12 +17,14 @@ import { VgCoreModule } from 'videogular2/core';
 import { VgControlsModule } from 'videogular2/controls';
 import { MainpageComponent } from './mainpage/mainpage.component';
 import { LoginComponent } from './login/login.component';
-
+import { AllCoursesComponent } from './all-courses/all-courses.component';
+import { SingleCourseComponent } from './single-course/single-course.component';
+import { SingleModComponent } from './single-mod/single-mod.component';
 import { UserService } from './login/user.service';
 import {HttpClient, HttpHeaders, HttpClientModule} from '@angular/common/http';
 
 //import {MatCardContent} from '@angular/material'
-const appRoutes: Routes = [ 
+const appRoutes: Routes = [
   { path: 'lesson-list', component: LessonComponent},
   { path: 'dashboard', component: MainpageComponent},
   { path: 'login', component: LoginComponent}
@@ -36,6 +38,9 @@ const appRoutes: Routes = [
     VideoplayerComponent,
     MainpageComponent,
     LoginComponent,
+    AllCoursesComponent,
+    SingleCourseComponent,
+    SingleModComponent,
   ],
   imports: [
     MatCardModule,
@@ -49,14 +54,17 @@ const appRoutes: Routes = [
     VgControlsModule,
     HttpClientModule,
     RouterModule.forRoot(
-      appRoutes,
-      { enableTracing: true } // <-- debugging purposes only
+      appRoutes
+    ),
+    RouterModule.forChild(
+      appRoutes
     )
   ],
   providers: [UserService, HttpClient],
   bootstrap: [AppComponent],
   exports: [
     MatCheckboxModule,
+    RouterModule
   ]
 })
 export class AppModule { }

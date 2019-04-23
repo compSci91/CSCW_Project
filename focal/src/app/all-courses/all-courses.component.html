@@ -1,0 +1,6 @@
+<nav>
+<a routerLink="/single-course">Psyduck</a>
+<a [routerLink]= "['/single-course', {outlets:{'course-outlet':['single-course']}}]">Wobbuffet</a>
+</nav>
+<router-outlet ></router-outlet>
+<router-outlet name="course-outlet"></router-outlet>
