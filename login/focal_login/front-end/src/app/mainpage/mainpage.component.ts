@@ -76,9 +76,13 @@ export class MainpageComponent implements OnInit {
     // embodiment.modules.push(course1_lesson1);
     // embodiment.modules.push(course2_lesson2);
 
-    let embodiment = JSON.parse(json_course_2)
 
-    this.courses.push(embodiment);
+    let course_list_json = '[{"name": "Computer Supported Cooperative Work", "modules": [{"name": "Course 1: Lesson 1", "storyboard_completed": true, "filming_complete": true, "audio_complete": true, "production_complete": false, "aggregation_complete": false, "final_review_complete": false}, {"name": "Course 1: Lesson 2", "storyboard_completed": true, "filming_complete": true, "audio_complete": false, "production_complete": false, "aggregation_complete": false, "final_review_complete": false}]}, {"name": "Embodied Interaction", "modules": [{"name": "Course 2: Lesson 1", "storyboard_completed": true, "filming_complete": false, "audio_complete": false, "production_complete": false, "aggregation_complete": false, "final_review_complete": false}, {"name": "Course 2: Lesson 2", "storyboard_completed": true, "filming_complete": true, "audio_complete": false, "production_complete": false, "aggregation_complete": true, "final_review_complete": true}]}]'
+    // let embodiment = JSON.parse(json_course_2)
+
+    this.courses = JSON.parse(course_list_json)
+
+    // this.courses.push(embodiment);
 
 
 
