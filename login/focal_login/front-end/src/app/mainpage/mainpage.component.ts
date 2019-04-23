@@ -40,18 +40,18 @@ export class MainpageComponent implements OnInit {
 
     this.courses.push(cscw)
 
-    let embodiment = new Course()
-    embodiment.name = "Embodied Interaction"
-    embodiment.modules = []
+    // let embodiment = new Course()
+    // embodiment.name = "Embodied Interaction"
+    // embodiment.modules = []
 
-    let course1_lesson1 = new Module();
-    course1_lesson1.name = "Course 2: Lesson 1";
-    course1_lesson1.storyboard_completed = true;
-    course1_lesson1.filming_complete = false;
-    course1_lesson1.audio_complete = false;
-    course1_lesson1.production_complete = false;
-    course1_lesson1.aggregation_complete = false;
-    course1_lesson1.final_review_complete = false;
+    // let course1_lesson1 = new Module();
+    // course1_lesson1.name = "Course 2: Lesson 1";
+    // course1_lesson1.storyboard_completed = true;
+    // course1_lesson1.filming_complete = false;
+    // course1_lesson1.audio_complete = false;
+    // course1_lesson1.production_complete = false;
+    // course1_lesson1.aggregation_complete = false;
+    // course1_lesson1.final_review_complete = false;
 
     // let course2_lesson2 = new Module();
     // course2_lesson2.name = "Course 2: Lesson 2";
@@ -62,16 +62,16 @@ export class MainpageComponent implements OnInit {
     // course2_lesson2.aggregation_complete = true;
     // course2_lesson2.final_review_complete = true;
 
-    var json_module = '{"name": "Course 2: Lesson 2", "storyboard_completed": true, "filming_complete": true, "audio_complete": false, "production_complete": false, "aggregation_complete": true, "final_review_complete": true}'
+
+    var json_course_2 = '{"name": "Embodied Interaction", "modules": [{"name": "Course 2: Lesson 1", "storyboard_completed": true, "filming_complete": false, "audio_complete": false, "production_complete": false, "aggregation_complete": false, "final_review_complete": false}, {"name": "Course 2: Lesson 2", "storyboard_completed": true, "filming_complete": true, "audio_complete": false, "production_complete": false, "aggregation_complete": true, "final_review_complete": true}]}'
 
 
-    var course2_lesson2 = JSON.parse(json_module);
+    // console.log("**************************", course2_lesson2.name)
 
+    // embodiment.modules.push(course1_lesson1);
+    // embodiment.modules.push(course2_lesson2);
 
-    console.log("**************************", course2_lesson2.name)
-
-    embodiment.modules.push(course1_lesson1);
-    embodiment.modules.push(course2_lesson2);
+    let embodiment = JSON.parse(json_course_2)
 
     this.courses.push(embodiment);
 
