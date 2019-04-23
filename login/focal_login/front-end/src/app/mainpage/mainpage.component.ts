@@ -53,14 +53,22 @@ export class MainpageComponent implements OnInit {
     course1_lesson1.aggregation_complete = false;
     course1_lesson1.final_review_complete = false;
 
-    let course2_lesson2 = new Module();
-    course2_lesson2.name = "Course 2: Lesson 2";
-    course2_lesson2.storyboard_completed = true;
-    course2_lesson2.filming_complete = true;
-    course2_lesson2.audio_complete = false;
-    course2_lesson2.production_complete = false;
-    course2_lesson2.aggregation_complete = true;
-    course2_lesson2.final_review_complete = true;
+    // let course2_lesson2 = new Module();
+    // course2_lesson2.name = "Course 2: Lesson 2";
+    // course2_lesson2.storyboard_completed = true;
+    // course2_lesson2.filming_complete = true;
+    // course2_lesson2.audio_complete = false;
+    // course2_lesson2.production_complete = false;
+    // course2_lesson2.aggregation_complete = true;
+    // course2_lesson2.final_review_complete = true;
+
+    var json_module = '{"name": "Course 2: Lesson 2", "storyboard_completed": true, "filming_complete": true, "audio_complete": false, "production_complete": false, "aggregation_complete": true, "final_review_complete": true}'
+
+
+    var course2_lesson2 = JSON.parse(json_module);
+
+
+    console.log("**************************", course2_lesson2.name)
 
     embodiment.modules.push(course1_lesson1);
     embodiment.modules.push(course2_lesson2);
@@ -80,6 +88,24 @@ export class MainpageComponent implements OnInit {
 
   ngOnInit() {
       this.update()
+
+    // var json_module = '{name: "Course 2: Lesson 2",storyboard_completed: true,filming_complete: true,audio_complete: false,production_complete: false, aggregation_complete: true, final_review_complete: true}'
+    //
+    //
+    // var obj = JSON.parse(json_module)
+
+    // var json_module = '{"rollno":101, "name":"Mayank", "age":20}'
+
+    // var json_module = '{"name": "Course 2: Lesson 2", "storyboard_completed": true, "filming_complete": true, "audio_complete": false, "production_complete": false, "aggregation_complete": true, "final_review_complete": true}'
+    //
+    //
+    // var object1 = JSON.parse(json_module);
+    //
+    //
+    // console.log("**************************", object1.name)
+
+
+
   }
 
 
