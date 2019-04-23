@@ -1,5 +1,7 @@
 import {Injectable} from '@angular/core';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
+import { Router } from '@angular/router';
+
 
 @Injectable()
 export class UserService {
@@ -19,24 +21,32 @@ export class UserService {
   // error messages received from the login attempt
   public errors: any = [];
 
-  constructor(private http: HttpClient) {
+  constructor(private http: HttpClient, private router:Router) {
     this.httpOptions = {
       headers: new HttpHeaders({'Content-Type': 'application/json'})
     };
   }
 
   // Uses http.post() to get an auth token from djangorestframework-jwt endpoint
-  public login(user) {
-    this.http.post('/api-token-auth/', JSON.stringify(user), this.httpOptions).subscribe(
+  public login(user) : boolean {
+    this.http.post(' http://127.0.0.1:8000/api-token-auth/', JSON.stringify(user), this.httpOptions).subscribe(
       data => {
         console.log('login success', data);
-        this.updateData(data['token']);
+         this.updateData(data['token']);
+         this.router.navigateByUrl('/dashboard');
+
+        return true; 
+
+
       },
       err => {
         console.error('login error', err);
         this.errors = err['error'];
+        return false; 
       }
     );
+
+    return false; 
   }
 
   /**
@@ -47,12 +57,14 @@ export class UserService {
       data => {
         console.log('refresh success', data);
         this.updateData(data['token']);
+
       },
       err => {
         console.error('refresh error', err);
         this.errors = err['error'];
       }
     );
+
   }
 
   public logout() {
