@@ -1,8 +1,8 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([["styles"],{
 
-/***/ "./node_modules/raw-loader/index.js!./node_modules/postcss-loader/lib/index.js??embedded!./src/styles.css":
+/***/ "./node_modules/raw-loader/index.js!./node_modules/postcss-loader/lib/index.js??embedded!./src/assets/styles.css":
 /*!**********************************************************************************************!*\
-  !*** ./node_modules/raw-loader!./node_modules/postcss-loader/lib??embedded!./src/styles.css ***!
+  !*** ./node_modules/raw-loader!./node_modules/postcss-loader/lib??embedded!./src/assets/styles.css ***!
   \**********************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
@@ -502,15 +502,15 @@ module.exports = function (css) {
 
 /***/ }),
 
-/***/ "./src/styles.css":
+/***/ "./src/assets/styles.css":
 /*!************************!*\
-  !*** ./src/styles.css ***!
+  !*** ./src/assets/styles.css ***!
   \************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 
-var content = __webpack_require__(/*! !../node_modules/raw-loader!../node_modules/postcss-loader/lib??embedded!./styles.css */ "./node_modules/raw-loader/index.js!./node_modules/postcss-loader/lib/index.js??embedded!./src/styles.css");
+var content = __webpack_require__(/*! !../node_modules/raw-loader!../node_modules/postcss-loader/lib??embedded!./styles.css */ "./node_modules/raw-loader/index.js!./node_modules/postcss-loader/lib/index.js??embedded!./src/assets/styles.css");
 
 if(typeof content === 'string') content = [[module.i, content, '']];
 
@@ -534,12 +534,12 @@ if(false) {}
 
 /***/ 2:
 /*!******************************!*\
-  !*** multi ./src/styles.css ***!
+  !*** multi ./src/assets/styles.css ***!
   \******************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Users/kate/Desktop/login/focal_login/front-end/src/styles.css */"./src/styles.css");
+module.exports = __webpack_require__(/*! /Users/kate/Desktop/login/focal_login/front-end/src/assets/styles.css */"./src/assets/styles.css");
 
 
 /***/ })
