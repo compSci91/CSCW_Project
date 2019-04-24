@@ -1,10 +1,12 @@
 [
 {
     "model": "focal_login.Project",
+    "pk": 1,
     "fields": {
-      "desc": "Project Desc 2",
-      "name": "Project Name 2",
-      "file_path": "youtue.com" 
+      "desc": "Project Desc 3",
+      "name": "Project Name 3",
+      "file_path": "youtue.com",
+      "storyboard_completed":"False"
     }
 }
 ]

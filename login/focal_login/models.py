@@ -17,6 +17,12 @@ class Project(models.Model):
 	desc = CharField(max_length=150)
 	name = CharField(max_length=50)
 	file_path = TextField()
+	storyboard_completed = BooleanField(default=False)
+	filming_complete = BooleanField(default=False)
+	audio_complete = BooleanField(default=False)
+	production_complete = BooleanField(default=False)
+	aggregation_complete = BooleanField(default=False)
+	final_review_complete = BooleanField(default=False)
 
 class Status(models.Model):
 	status_id = models.IntegerField(primary_key=True)
