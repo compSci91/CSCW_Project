@@ -2,19 +2,25 @@ import { Component, OnInit } from '@angular/core';
 import {Module} from '../module';
 import {Course} from '../course';
 
+export interface ModuleMetaData{
+  module_name:string;
+  module_number:number;
+  module_storyboard_url: string;
+  module_video_url: string;
+}
+
 @Component({
   selector: 'app-single-course',
   templateUrl: './single-course.component.html',
   styleUrls: ['./single-course.component.css']
 })
 
+
 export class SingleCourseComponent implements OnInit {
 
-  modules =[];
-  //title, mediaurl, media-type,
-  //
-  //create a new lessons
-  //initialize all things
+  course_modules =[];
+  module_counter =0;
+  module_name =0;
 
 
   constructor() { }
@@ -22,4 +28,7 @@ export class SingleCourseComponent implements OnInit {
   ngOnInit() {
   }
 
+  create_page(){
+
+  }
 }

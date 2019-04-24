@@ -20,13 +20,41 @@ import { LoginComponent } from './login/login.component';
 import { AllCoursesComponent } from './all-courses/all-courses.component';
 import { SingleCourseComponent } from './single-course/single-course.component';
 import { SingleModComponent } from './single-mod/single-mod.component';
+import { StoryboardComponent } from './storyboard/storyboard.component';
+import { FinalreviewComponent } from './finalreview/finalreview.component';
 import { UserService } from './login/user.service';
 import {HttpClient, HttpHeaders, HttpClientModule} from '@angular/common/http';
-
 //import {MatCardContent} from '@angular/material'
 const appRoutes: Routes = [
-  { path: 'lesson-list', component: LessonComponent},
-  { path: 'dashboard', component: MainpageComponent},
+  {
+    path: 'course-list',
+    component: AllCoursesComponent,
+    children: [
+          { path : 'single-course',
+            component: SingleCourseComponent,
+            outlet:'CourseOutlet',
+            children: [
+                { path:'single-mod',
+                  component: SingleModComponent,
+                  outlet:'ModuleOutlet',
+                  children: [
+                    { path: 'lesson-list',
+                      component: LessonComponent,
+                      outlet:'LessonOutlet'
+                    },
+                    { path: 'storyboard-list',
+                      component: StoryboardComponent,
+                      outlet:'LessonOutlet'
+                    }
+                ]
+
+              }
+              ]}
+        ]
+  },
+  { path: 'dashboard',
+    component: MainpageComponent
+  },
   { path: 'login', component: LoginComponent}
 ];
 
@@ -41,6 +69,8 @@ const appRoutes: Routes = [
     AllCoursesComponent,
     SingleCourseComponent,
     SingleModComponent,
+    StoryboardComponent,
+    FinalreviewComponent,
   ],
   imports: [
     MatCardModule,

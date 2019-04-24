@@ -1,6 +1,4 @@
-<nav>
-<a routerLink="/single-course">Psyduck</a>
-<a [routerLink]= "['/single-course', {outlets:{'course-outlet':['single-course']}}]">Wobbuffet</a>
-</nav>
-<router-outlet ></router-outlet>
-<router-outlet name="course-outlet"></router-outlet>
+<p><p>
+<button [routerLink]="[{ outlets: { CourseOutlet: ['single-course'] } }]">Thermodynamics</button>
+<button [routerLink]="[{ outlets: { CourseOutlet: ['single-course'] } }]">Data Structures</button>
+<router-outlet name="CourseOutlet"></router-outlet>
