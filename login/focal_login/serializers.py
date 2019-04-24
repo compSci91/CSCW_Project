@@ -39,13 +39,11 @@ class ProjectSerializer(serializers.ModelSerializer):
     user = serializers.StringRelatedField(many=False)
 
     class Meta:
-        model = Project
+        project_model = Project
         fields = ('project_id', 'desc', 'name', 'file_path')
 
-class EventSerializer(serializers.ModelSerializer):
-    user = serializers.StringRelatedField(many=False)
-
-    class Meta:
-        model = Event
-        fields = ('project_id', 'status_id', 'datetime')
+    def create(self, validated_data):
+        instance = self.Meta.model(**validated_data)
+        instance.save()
+        return instance
         
