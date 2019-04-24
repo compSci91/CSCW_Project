@@ -1,0 +1,23 @@
+<!-- <base href="/"> -->
+<div *ngFor="let course of courses">
+  <h3>{{course.name}}</h3>
+
+  <table>
+    <tr>
+      <th>Lesson Name</th>
+      <th>Storyboard</th>
+      <th>Filming</th>
+      <th>Final Review</th>
+    </tr>
+    <tr *ngFor="let module of course.modules">
+      <td>{{module.name}}</td>
+      <!-- [ngStyle]="yourText=='INVALID'?{'background-color':'red'} : {'background-color': 'white'}" -->
+
+      <td [ngStyle]="module.storyboard_completed ? {'background-color' : 'chartreuse'} : {'background-color' : 'red'}"></td>
+      <td [ngStyle]="module.filming_complete ? {'background-color' : 'chartreuse'} : {'background-color' : 'red'}"></td>
+      <td [ngStyle]="module.final_review_complete ? {'background-color' : 'chartreuse'} : {'background-color' : 'red'}"></td>
+    </tr>
+  </table>
+
+  <br/>
+</div>
