@@ -1,0 +1,48 @@
+[
+   {
+      "name":"Computer Supported Cooperative Work",
+      "modules":[
+         {
+            "name":"Course 1: Lesson 1",
+            "storyboard_completed":true,
+            "filming_complete":true,
+            "audio_complete":true,
+            "production_complete":false,
+            "aggregation_complete":false,
+            "final_review_complete":false
+         },
+         {
+            "name":"Course 1: Lesson 2",
+            "storyboard_completed":true,
+            "filming_complete":true,
+            "audio_complete":false,
+            "production_complete":false,
+            "aggregation_complete":false,
+            "final_review_complete":false
+         }
+      ]
+   },
+   {
+      "name":"Embodied Interaction",
+      "modules":[
+         {
+            "name":"Course 2: Lesson 1",
+            "storyboard_completed":true,
+            "filming_complete":false,
+            "audio_complete":false,
+            "production_complete":false,
+            "aggregation_complete":false,
+            "final_review_complete":false
+         },
+         {
+            "name":"Course 2: Lesson 2",
+            "storyboard_completed":true,
+            "filming_complete":true,
+            "audio_complete":false,
+            "production_complete":false,
+            "aggregation_complete":true,
+            "final_review_complete":true
+         }
+      ]
+   }
+]

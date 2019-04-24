@@ -3,6 +3,8 @@ from django.contrib.auth.models import User
 from rest_framework import viewsets, permissions
 from . import serializers
 from .permissions import ReadOnly
+from rest_framework_jwt.settings import api_settings
+
 
 
 def index(request, path=''):
@@ -20,4 +22,4 @@ class UserViewSet(viewsets.ModelViewSet):
     serializer_class = serializers.UserSerializer
     permission_classes = (ReadOnly, )
 
-
+    
