@@ -26,5 +26,6 @@ Django = ">=2.1.1, <2.2"
 "Jinja2" = ">=2.10"
 MarkupSafe = ">=1.0"
 PyJWT = ">=1.6.4"
+django-cors-headers = "*"
 
 [dev-packages]
