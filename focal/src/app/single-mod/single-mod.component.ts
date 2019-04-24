@@ -7,6 +7,7 @@ import { LessonComponent } from '../lesson/lesson.component';
 })
 export class SingleModComponent implements OnInit {
 
+  links: Array<{ text: string, path: string }> = [];
   constructor() { }
 
   ngOnInit() {
