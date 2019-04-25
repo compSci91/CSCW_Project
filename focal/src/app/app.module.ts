@@ -30,11 +30,12 @@ const appRoutes: Routes = [
     path: 'course-list',
     component: AllCoursesComponent,
     children: [
-          { path : 'single-course',
+          { path : ':course_id',
             component: SingleCourseComponent,
             outlet:'CourseOutlet',
             children: [
-                { path:'single-mod',
+                { //path:'single-mod',
+                  path:'id',
                   component: SingleModComponent,
                   outlet:'ModuleOutlet',
                   children: [

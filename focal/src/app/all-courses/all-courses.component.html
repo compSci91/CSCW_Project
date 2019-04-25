@@ -1,4 +1,10 @@
 <p><p>
-<button [routerLink]="[{ outlets: { CourseOutlet: ['single-course'] } }]">Thermodynamics</button>
-<button [routerLink]="[{ outlets: { CourseOutlet: ['single-course'] } }]">Data Structures</button>
+
+<!--<button [routerLink]="[{ outlets: { CourseOutlet: ['single-course'] } }]">Thermodynamics</button>-->
+<!--<button [routerLink]="[{ outlets: { CourseOutlet: ['single-course'] } }]">Data Structures</button>-->
+<input #box (keyup.enter)="update(box.value)">
+<button (click)="update(box.value)">New Course</button>
+<li *ngFor="let Course of all_courses">
+  <a><button [routerLink]="[{ outlets: { CourseOutlet: ['id'] } }]">{{Course.name}}</button></a>
+</li>
 <router-outlet name="CourseOutlet"></router-outlet>

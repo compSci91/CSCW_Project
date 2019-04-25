@@ -19,9 +19,6 @@ export interface ModuleMetaData{
 export class SingleCourseComponent implements OnInit {
 
   course_modules =[];
-  module_counter =0;
-  module_name =0;
-
 
   constructor() { }
 
