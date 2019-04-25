@@ -29,30 +29,32 @@ const appRoutes: Routes = [
   {
     path: 'course-list',
     component: AllCoursesComponent,
-    children: [
-          { path : ':course_id',
-            component: SingleCourseComponent,
-            outlet:'CourseOutlet',
-            children: [
-                { //path:'single-mod',
-                  path:'id',
-                  component: SingleModComponent,
-                  outlet:'ModuleOutlet',
-                  children: [
-                    { path: 'lesson-list',
-                      component: LessonComponent,
-                      outlet:'LessonOutlet'
-                    },
-                    { path: 'storyboard-list',
-                      component: StoryboardComponent,
-                      outlet:'LessonOutlet'
-                    }
-                ]
-
-              }
-              ]}
-        ]
+    // children: [
+    //       { path : ':course_id',
+    //         component: SingleCourseComponent,
+    //         outlet:'CourseOutlet',
+    //         children: [
+    //             { //path:'single-mod',
+    //               path:'id',
+    //               component: SingleModComponent,
+    //               outlet:'ModuleOutlet',
+    //               children: [
+    //                 { path: 'lesson-list',
+    //                   component: LessonComponent,
+    //                   outlet:'LessonOutlet'
+    //                 },
+    //                 { path: 'storyboard-list',
+    //                   component: StoryboardComponent,
+    //                   outlet:'LessonOutlet'
+    //                 }
+    //             ]
+    //
+    //           }
+    //           ]}
+    //     ]
   },
+  {path: 'course/:course_id',
+  component: SingleCourseComponent},
   { path: 'dashboard',
     component: MainpageComponent
   },

@@ -20,7 +20,7 @@ export class AllCoursesComponent implements OnInit {
   update(value: string){
       this.new_course = new Course();
       this.new_course.name = value;
-      this.new_course.id = this.temp_course_id;
+      this.new_course.course_id = this.temp_course_id;
       this.temp_course_id++;
       this.all_courses.push(this.new_course);
    }
