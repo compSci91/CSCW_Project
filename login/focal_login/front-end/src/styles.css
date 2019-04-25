@@ -1,1 +1,41 @@
 /* You can add global styles to this file, and also import other style files */
+.container {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  flex: auto;
+}
+.header {
+background-color: #500000;
+text-align: left;
+
+  padding: 1rem;
+}
+.footer {
+  background-color: #500000;
+  text-align: left;
+  flex: auto;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  }
+
+.html, .body {
+background: #F1EFEE;
+color: #000000;
+margin: 10;
+font-family: "Open Sans","Helvetica Neue","Helvetica",Helvetica,Arial,sans-serif;
+font-weight: normal;
+font-style: normal;
+line-height: ;
+position: relative;
+cursor: auto;
+height: 100%;
+margin: 0;
+padding: 0;
+text-align: center;
+font-size: 15px;
+flex: auto;
+}

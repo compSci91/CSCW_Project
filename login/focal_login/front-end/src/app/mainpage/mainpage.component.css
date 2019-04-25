@@ -5,3 +5,23 @@
   .black {
       color: black;
 }
+body {
+    background: #F1EFEE;
+    color: #000000;
+    margin: 10;
+    font-family: "Open Sans","Helvetica Neue","Helvetica",Helvetica,Arial,sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    line-height: ;
+    position: relative;
+    cursor: auto;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    table-align: center;
+    font-size: 15px;
+    
+    
+
+}

@@ -20,6 +20,8 @@ import { LoginComponent } from './login/login.component';
 
 import { UserService } from './login/user.service';
 import {HttpClient, HttpHeaders, HttpClientModule} from '@angular/common/http';
+import { HeaderComponent } from './header/header.component';
+import { FooterComponent } from './footer/footer.component';
 
 //import {MatCardContent} from '@angular/material'
 const appRoutes: Routes = [ 
@@ -36,6 +38,8 @@ const appRoutes: Routes = [
     VideoplayerComponent,
     MainpageComponent,
     LoginComponent,
+    HeaderComponent,
+    FooterComponent,
   ],
   imports: [
     MatCardModule,
