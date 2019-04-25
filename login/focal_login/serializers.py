@@ -3,8 +3,9 @@ from rest_framework import serializers
 from .models import FocalUser
 from .models import Event
 from .models import Project
+from .models import Course
+from .test_models import CourseT
 from rest_framework_jwt.settings import api_settings
-
 
 
 class UserSerializer(serializers.ModelSerializer):
@@ -45,11 +46,9 @@ class FocalUserSerializer(serializers.ModelSerializer):
         fields = ('username', 'email', 'password', 'first_name', 'last_name', 'userID',  'type_id', 'is_active')
 
 class ProjectSerializer(serializers.ModelSerializer):
-    user = serializers.StringRelatedField(many=False)
-
     class Meta:
         model = Project
-        fields = ('project_id', 'desc', 'name', 'file_path', 'storyboard_completed', 'filming_complete', 'audio_complete',  'production_complete', 'aggregation_complete', 'final_review_complete')
+        fields = ('id', 'desc', 'name', 'file_path', 'storyboard_completed', 'filming_complete', 'audio_complete',  'production_complete', 'aggregation_complete', 'final_review_complete', 'course')
 
     def create(self, validated_data):
         instance = self.Meta.model(**validated_data)
@@ -61,3 +60,18 @@ class ProjectSerializer(serializers.ModelSerializer):
                 setattr(instance, attr, value)
         instance.save()
         return instance
+
+class CouserSerializer(serializers.ModelSerializer):
+    projects = ProjectSerializer(many=True, read_only=True)
+    
+    class Meta:
+        model = Course
+        fields = ('id', 'name', 'projects')
+
+    def create(self, validated_data):
+        instance = self.Meta.model(**validated_data)
+        instance.save()
+        return instance
+
+    
+

@@ -4,6 +4,7 @@ from rest_framework import viewsets, permissions
 from . import serializers
 from .permissions import ReadOnly
 from rest_framework_jwt.settings import api_settings
+from .models import Course
 
 
 
@@ -22,4 +23,6 @@ class UserViewSet(viewsets.ModelViewSet):
     serializer_class = serializers.UserSerializer
     permission_classes = (ReadOnly, )
 
-    
+class CourseViewSet(viewsets.ModelViewSet):
+    queryset = Course.objects.all()
+    serializer_class = serializers.CouserSerializer

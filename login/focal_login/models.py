@@ -12,8 +12,12 @@ class FocalUser(models.Model):
 	type_id = CharField(max_length=50)
 	is_active = BooleanField()
 
+class Course(models.Model):	
+	id = models.AutoField(primary_key=True)
+	name = CharField(max_length=100)
+
 class Project(models.Model):
-	project_id = models.AutoField(primary_key=True)
+	id = models.AutoField(primary_key=True)
 	desc = CharField(max_length=150)
 	name = CharField(max_length=50)
 	file_path = TextField()
@@ -23,6 +27,7 @@ class Project(models.Model):
 	production_complete = BooleanField(default=False)
 	aggregation_complete = BooleanField(default=False)
 	final_review_complete = BooleanField(default=False)
+	course = models.ForeignKey(Course, on_delete=models.CASCADE, related_name="projects")
 
 class Status(models.Model):
 	status_id = models.IntegerField(primary_key=True)
