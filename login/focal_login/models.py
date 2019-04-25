@@ -20,14 +20,15 @@ class Project(models.Model):
 	id = models.AutoField(primary_key=True)
 	desc = CharField(max_length=150)
 	name = CharField(max_length=50)
-	file_path = TextField()
+	storyboard_file_path = TextField()
 	storyboard_completed = BooleanField(default=False)
 	filming_complete = BooleanField(default=False)
 	audio_complete = BooleanField(default=False)
 	production_complete = BooleanField(default=False)
 	aggregation_complete = BooleanField(default=False)
+	video_file_path = TextField()
 	final_review_complete = BooleanField(default=False)
-	course = models.ForeignKey(Course, on_delete=models.CASCADE, related_name="projects")
+	course = models.ForeignKey(Course, on_delete=models.CASCADE, related_name="projects", null=True, blank=True)
 
 class Status(models.Model):
 	status_id = models.IntegerField(primary_key=True)

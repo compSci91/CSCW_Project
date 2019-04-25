@@ -3,7 +3,7 @@
     "model": "focal_login.Course",
     "pk": 1,
     "fields": {
-      "name": "Course 100"
+      "name": "CSCE 470: Information Storage and Retrieval"
     }
 }
 ]

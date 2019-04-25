@@ -4,7 +4,6 @@ from .models import FocalUser
 from .models import Event
 from .models import Project
 from .models import Course
-from .test_models import CourseT
 from rest_framework_jwt.settings import api_settings
 
 
@@ -43,12 +42,16 @@ class FocalUserSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = FocalUser
-        fields = ('username', 'email', 'password', 'first_name', 'last_name', 'userID',  'type_id', 'is_active')
+        fields = ('username', 'email', 'password', 'first_name', 
+        'last_name', 'userID',  'type_id', 'is_active')
 
 class ProjectSerializer(serializers.ModelSerializer):
     class Meta:
         model = Project
-        fields = ('id', 'desc', 'name', 'file_path', 'storyboard_completed', 'filming_complete', 'audio_complete',  'production_complete', 'aggregation_complete', 'final_review_complete', 'course')
+        fields = ('id', 'desc', 'name', 'storyboard_file_path', 
+        'storyboard_completed', 'filming_complete', 'audio_complete',  
+        'production_complete', 'aggregation_complete', 'video_file_path',
+        'final_review_complete', 'course')
 
     def create(self, validated_data):
         instance = self.Meta.model(**validated_data)

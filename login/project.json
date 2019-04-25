@@ -1,12 +1,14 @@
 [
-{
-    "model": "focal_login.Project",
-    "pk": 1,
-    "fields": {
-      "desc": "Project Desc 3",
-      "name": "Project Name 3",
-      "file_path": "youtue.com",
-      "storyboard_completed":"False"
-    }
-}
-]
+  {
+      "model": "focal_login.Project",
+      "pk": 1,
+      "fields": {
+        "desc": "theoretical clustering conepts and clustering in practice",
+        "name": "Clustering",
+        "storyboard_file_path": "/path/to/storyboard",
+        "storyboard_completed":"False",
+        "video_file_path": "/path/to/video",
+        "course": 1
+      }
+  }
+  ]
