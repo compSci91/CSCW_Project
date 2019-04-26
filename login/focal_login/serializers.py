@@ -11,7 +11,18 @@ class UserSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = User
-        fields = ('id', 'username', 'first_name', 'last_name')
+        fields = ('id', 
+        "password",
+        "last_login",
+        "is_superuser",
+        "username",
+        "first_name",
+        "last_name",
+        "email",
+        "is_staff",
+        "is_active",
+        "date_joined"
+        )
     
     def create(self, validated_data):
         password = validated_data.pop('password', None)
@@ -42,8 +53,8 @@ class FocalUserSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = FocalUser
-        fields = ('username', 'email', 'password', 'first_name', 
-        'last_name', 'userID',  'type_id', 'is_active')
+        fields = ('id', 
+        'userID',  'type_id', "user")
 
 class ProjectSerializer(serializers.ModelSerializer):
     class Meta:

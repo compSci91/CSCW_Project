@@ -23,8 +23,7 @@
     "fields": {
       "user": 1,
       "userID": 2,
-      "type_id": 2,
-      "is_active": "True" 
+      "type_id": 2
     }
   },
 {
@@ -51,8 +50,7 @@
     "fields": {
       "user": 2,
       "userID": 2,
-      "type_id": 2,
-      "is_active": "True" 
+      "type_id": 2
     }
   }
 ]

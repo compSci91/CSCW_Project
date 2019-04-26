@@ -5,6 +5,7 @@ from . import serializers
 from .permissions import ReadOnly
 from rest_framework_jwt.settings import api_settings
 from .models import Course
+from .models import FocalUser
 
 
 
@@ -26,3 +27,8 @@ class UserViewSet(viewsets.ModelViewSet):
 class CourseViewSet(viewsets.ModelViewSet):
     queryset = Course.objects.all()
     serializer_class = serializers.CouserSerializer
+
+
+class FocalUserViewSet(viewsets.ModelViewSet):
+    queryset = FocalUser.objects.all()
+    serializer_class = serializers.FocalUserSerializer

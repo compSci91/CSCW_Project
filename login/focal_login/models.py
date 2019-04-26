@@ -10,7 +10,6 @@ class FocalUser(models.Model):
 	user = models.OneToOneField(User, on_delete=models.CASCADE)
 	userID = CharField(max_length=50)
 	type_id = CharField(max_length=50)
-	is_active = BooleanField()
 
 class Course(models.Model):	
 	id = models.AutoField(primary_key=True)
