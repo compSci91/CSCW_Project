@@ -1,6 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import {Module} from '../module';
 import {Course} from '../course'
+import { UserService } from '../login/user.service';
+import {HttpClient, HttpHeaders} from '@angular/common/http';
+import { Router } from '@angular/router';
+
+
+
 
 @Component({
   selector: 'app-mainpage',
@@ -8,6 +14,8 @@ import {Course} from '../course'
   styleUrls: ['./mainpage.component.css']
 })
 export class MainpageComponent implements OnInit {
+  private httpOptions: any;
+
   courses = []
 
   update = function(){
@@ -82,7 +90,24 @@ export class MainpageComponent implements OnInit {
 
     this.courses = JSON.parse(course_list_json)
 
+    // console.log("Fron the mainpage component: ", userService.getDashboard())
+
     // this.courses.push(embodiment);
+
+
+    this.http.get('http://127.0.0.1:8000/api/courses').subscribe(
+    data => {
+      // console.log('got dashboard data success', data[0]);
+      console.log("Data returned: ", data)
+      // this.courses = JSON.parse(data)
+      this.courses = data
+
+    },
+    err => {
+      console.error('did not get dashboad data', err);
+
+    }
+  );
 
 
 
@@ -90,8 +115,10 @@ export class MainpageComponent implements OnInit {
 
    }
 
-  constructor() {
-
+  constructor(private userService: UserService, private http: HttpClient, private router:Router) {
+    this.httpOptions = {
+      headers: new HttpHeaders({'Content-Type': 'application/json'})
+    };
 
   }
 

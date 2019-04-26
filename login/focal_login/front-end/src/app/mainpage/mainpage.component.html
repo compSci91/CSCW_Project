@@ -9,13 +9,13 @@
       <th>Filming</th>
       <th>Final Review</th>
     </tr>
-    <tr *ngFor="let module of course.modules">
-      <td>{{module.name}}</td>
+    <tr *ngFor="let project of course.projects">
+      <td>{{project.name}}</td>
       <!-- [ngStyle]="yourText=='INVALID'?{'background-color':'red'} : {'background-color': 'white'}" -->
 
-      <td [ngStyle]="module.storyboard_completed ? {'background-color' : 'chartreuse'} : {'background-color' : 'red'}"></td>
-      <td [ngStyle]="module.filming_complete ? {'background-color' : 'chartreuse'} : {'background-color' : 'red'}"></td>
-      <td [ngStyle]="module.final_review_complete ? {'background-color' : 'chartreuse'} : {'background-color' : 'red'}"></td>
+      <td [ngStyle]="project.storyboard_completed ? {'background-color' : 'chartreuse'} : {'background-color' : 'red'}"></td>
+      <td [ngStyle]="project.filming_complete ? {'background-color' : 'chartreuse'} : {'background-color' : 'red'}"></td>
+      <td [ngStyle]="project.final_review_complete ? {'background-color' : 'chartreuse'} : {'background-color' : 'red'}"></td>
     </tr>
   </table>
 

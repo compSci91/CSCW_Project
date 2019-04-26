@@ -35,18 +35,33 @@ export class UserService {
          this.updateData(data['token']);
          this.router.navigateByUrl('/dashboard');
 
-        return true; 
+        return true;
 
 
       },
       err => {
         console.error('login error', err);
         this.errors = err['error'];
-        return false; 
+        return false;
       }
     );
 
-    return false; 
+    return false;
+  }
+
+  public getDashboard(){
+    // this.http.get('/api/courses/').subscribe(
+      this.http.get('http://127.0.0.1:8000/api/courses').subscribe(
+      data => {
+        // console.log('got dashboard data success', data[0]);
+        return data
+
+      },
+      err => {
+        console.error('did not get dashboad data', err);
+
+      }
+    );
   }
 
   /**
