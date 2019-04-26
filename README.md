@@ -17,7 +17,19 @@ When you make changes to a db make sure to
 
 Users currently in DB for login
 
+username: professor@tamu.edu
+password: admin
+
 username: content@tamu.edu
+password: admin
+
+username: tool@tamu.edu
+password: admin
+
+username: media@tamu.edu
+password: admin
+
+username: committee@tamu.edu
 password: admin
 
 username: admin@tamu.edu
