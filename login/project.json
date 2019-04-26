@@ -3,12 +3,49 @@
       "model": "focal_login.Project",
       "pk": 1,
       "fields": {
-        "desc": "theoretical clustering conepts and clustering in practice",
+        "desc": "theoretical clustering concepts and clustering in practice",
         "name": "Clustering",
         "storyboard_file_path": "/path/to/storyboard",
         "storyboard_completed":"False",
         "video_file_path": "/path/to/video",
         "course": 1
       }
+  },
+  {
+    "model": "focal_login.Project",
+    "pk": 2,
+    "fields": {
+      "desc": "theoretical classification concepts and classification in practice",
+      "name": "Classification",
+      "storyboard_file_path": "/path/to/storyboard",
+      "storyboard_completed":"False",
+      "video_file_path": "/path/to/video",
+      "course": 1
+    }
+},
+{
+  "model": "focal_login.Project",
+  "pk": 3,
+  "fields": {
+    "desc": "Linear Regression explained and used in practice",
+    "name": "Mining and Analytics: Linear Regression",
+    "storyboard_file_path": "/path/to/storyboard",
+    "storyboard_completed":"False",
+    "video_file_path": "/path/to/video",
+    "course": 2
   }
+},
+{
+  "model": "focal_login.Project",
+  "pk": 4,
+  "fields": {
+    "desc": "Effective commuication of data through visualization",
+    "name": "Communication: Data Visualization",
+    "storyboard_file_path": "/path/to/storyboard",
+    "storyboard_completed":"False",
+    "video_file_path": "/path/to/video",
+    "course": 2
+  }
+}
+
   ]

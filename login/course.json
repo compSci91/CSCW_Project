@@ -5,5 +5,13 @@
     "fields": {
       "name": "CSCE 470: Information Storage and Retrieval"
     }
+},
+{
+  "model": "focal_login.Course",
+  "pk": 2,
+  "fields": {
+    "name": "CSCE 489 Data Science and Analytics"
+  }
 }
+
 ]
