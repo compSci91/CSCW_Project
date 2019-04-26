@@ -15,15 +15,22 @@ python3 manage.py runserver
 
 When you make changes to a db make sure to 
 
-```bash
-python3 manage.py migrations
-python3 manage.py runserver
-
-```
 Users currently in DB for login
 
-username: content@content.com
-password: pwd
+username: professor@tamu.edu
+password: admin
 
-username: admin@admin.com
+username: content@tamu.edu
+password: admin
+
+username: tool@tamu.edu
+password: admin
+
+username: media@tamu.edu
+password: admin
+
+username: committee@tamu.edu
+password: admin
+
+username: admin@tamu.edu
 password: admin
