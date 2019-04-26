@@ -6,10 +6,10 @@
         "password": "pbkdf2_sha256$120000$V2isoXl1Q88l$sVuB+25I6UNNLY76Ti0EixAu/Ucimqi7rFpbadDzqzc=",
         "last_login": null,
         "is_superuser": true,
-        "username": "admin@admin.com",
-        "first_name": "Admin",
-        "last_name": "User",
-        "email": "admin@admin.com",
+        "username": "professor@tamu.edu",
+        "first_name": "Professor",
+        "last_name": "Xavier",
+        "email": "professor@tamu.edu",
         "is_staff": true,
         "is_active": true,
         "date_joined": "2019-04-16T00:16:13.252Z",
@@ -22,21 +22,21 @@
     "pk": 1,
     "fields": {
       "user": 1,
-      "userID": 2,
-      "type_id": 2
+      "userID": 1,
+      "type_id": 1
     }
   },
 {
     "model": "auth.user",
     "pk": 2,
     "fields": {
-        "password": "pbkdf2_sha256$120000$6YHv5JMayFnN$+Y2TqedyjZq02kEw/0ZaXtyigzaH2+BRUIqqkSeAG90=",
+        "password": "pbkdf2_sha256$120000$V2isoXl1Q88l$sVuB+25I6UNNLY76Ti0EixAu/Ucimqi7rFpbadDzqzc=",
         "last_login": null,
         "is_superuser": false,
-        "username": "content@content.com",
+        "username": "content@tamu.edu",
         "first_name": "Content",
         "last_name": "Manager",
-        "email": "content@content.com",
+        "email": "content@tamu.edu",
         "is_staff": true,
         "is_active": true,
         "date_joined": "2019-04-16T00:19:01.130Z",
@@ -51,6 +51,114 @@
       "user": 2,
       "userID": 2,
       "type_id": 2
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 3,
+    "fields": {
+        "password": "pbkdf2_sha256$120000$V2isoXl1Q88l$sVuB+25I6UNNLY76Ti0EixAu/Ucimqi7rFpbadDzqzc=",
+        "last_login": null,
+        "is_superuser": true,
+        "username": "tool@tamu.edu",
+        "first_name": "Tool",
+        "last_name": "Designer",
+        "email": "tool@tamu.edu",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2019-04-16T00:16:13.252Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "focal_login.FocalUser",
+    "pk": 3,
+    "fields": {
+      "user": 3,
+      "userID": 1,
+      "type_id": 3
+    }
+  },
+{
+    "model": "auth.user",
+    "pk": 4,
+    "fields": {
+        "password": "pbkdf2_sha256$120000$V2isoXl1Q88l$sVuB+25I6UNNLY76Ti0EixAu/Ucimqi7rFpbadDzqzc=",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "media@tamu.edu",
+        "first_name": "Media",
+        "last_name": "Team",
+        "email": "meadia@tamu.edu",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2019-04-16T00:19:01.130Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "focal_login.FocalUser",
+    "pk": 4,
+    "fields": {
+      "user": 4,
+      "userID": 2,
+      "type_id": 4
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 5,
+    "fields": {
+        "password": "pbkdf2_sha256$120000$V2isoXl1Q88l$sVuB+25I6UNNLY76Ti0EixAu/Ucimqi7rFpbadDzqzc=",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "committee@tamu.edu",
+        "first_name": "Distance Education",
+        "last_name": "Committee",
+        "email": "committee@tamu.edu",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2019-04-16T00:19:01.130Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "focal_login.FocalUser",
+    "pk": 5,
+    "fields": {
+      "user": 5,
+      "userID": 1,
+      "type_id": 5
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 6,
+    "fields": {
+        "password": "pbkdf2_sha256$120000$V2isoXl1Q88l$sVuB+25I6UNNLY76Ti0EixAu/Ucimqi7rFpbadDzqzc=",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "admin@tamu.edu",
+        "first_name": "Admin",
+        "last_name": "User",
+        "email": "admin@tamu.edu",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2019-04-16T00:19:01.130Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "focal_login.FocalUser",
+    "pk": 6,
+    "fields": {
+      "user": 6,
+      "userID": 1,
+      "type_id": 10
     }
   }
 ]
