@@ -86,6 +86,3 @@ class CouserSerializer(serializers.ModelSerializer):
         instance = self.Meta.model(**validated_data)
         instance.save()
         return instance
-
-    
-

@@ -25,8 +25,32 @@ class UserViewSet(viewsets.ModelViewSet):
     permission_classes = (ReadOnly, )
 
 class CourseViewSet(viewsets.ModelViewSet):
+
     queryset = Course.objects.all()
     serializer_class = serializers.CouserSerializer
+
+    def create_employee_profile(request):
+        if request.POST:
+            course_form = CourseCreateForm(request.POST)
+
+            if course_form.is_valid():
+                new_course_form = course_form.save()
+                return redirect(new_course_form) #get_absolute_url set on model
+
+            else:
+                return render(request,
+                    'service/template_create_course.html',
+                        {'course_form': course_form}
+                        )
+
+        else:
+            course_form = CourseCreateForm(
+                            initial={'employee_choices': 'E'}
+                            )
+            return render(request,
+                    'service/template_create_course.html',
+                        {'course_form': course_form}
+                        )
 
 
 class FocalUserViewSet(viewsets.ModelViewSet):
