@@ -6,6 +6,7 @@ from .permissions import ReadOnly
 from rest_framework_jwt.settings import api_settings
 from .models import Course
 from .models import FocalUser
+from .forms import CourseCreateForm
 
 
 
@@ -29,6 +30,8 @@ class CourseViewSet(viewsets.ModelViewSet):
     queryset = Course.objects.all()
     serializer_class = serializers.CouserSerializer
 
+
+class CourseCreateViewSet(viewsets.ModelViewSet):
     def create_employee_profile(request):
         if request.POST:
             course_form = CourseCreateForm(request.POST)
