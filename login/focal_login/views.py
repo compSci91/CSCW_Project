@@ -48,7 +48,7 @@ class CourseCreateViewSet(viewsets.ModelViewSet):
 
         else:
             course_form = CourseCreateForm(
-                            initial={'employee_choices': 'E'}
+                            initial={'names': ''}
                             )
             return render(request,
                     'service/template_create_course.html',
