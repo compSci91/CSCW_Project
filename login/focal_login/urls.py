@@ -7,7 +7,7 @@ router = routers.DefaultRouter(trailing_slash=False)
 router.register(r'users', views.UserViewSet)
 router.register(r'courses', views.CourseViewSet)
 router.register(r'focal', views.FocalUserViewSet)
-router.register(r'add_course', views.CourseCreateViewSet)
+#router.register(r'add_course', views.CourseCreateViewSet)
 
 urlpatterns = [
     path(r'api/', include(router.urls)),
