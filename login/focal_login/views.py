@@ -6,7 +6,8 @@ from .permissions import ReadOnly
 from rest_framework_jwt.settings import api_settings
 from .models import Course
 from .models import FocalUser
-from .forms import CourseCreateForm
+from django.shortcuts import render, get_object_or_404
+from .forms import AddCourseForm
 
 
 
@@ -31,29 +32,29 @@ class CourseViewSet(viewsets.ModelViewSet):
     serializer_class = serializers.CouserSerializer
 
 
-class CourseCreateViewSet(viewsets.ModelViewSet):
-    def create_employee_profile(request):
-        if request.POST:
-            course_form = CourseCreateForm(request.POST)
+def add_course(request):
 
-            if course_form.is_valid():
-                new_course_form = course_form.save()
-                return redirect(new_course_form) #get_absolute_url set on model
+    if request.POST:
+        course_form = AddCourseForm(request.POST)
 
-            else:
-                return render(request,
-                    'service/template_create_course.html',
-                        {'course_form': course_form}
-                        )
+        if course_form.is_valid():
+            new_course_form = course_form.save()
+            return redirect(new_course_form) #get_absolute_url set on model
 
         else:
-            course_form = CourseCreateForm(
-                            initial={'names': ''}
-                            )
             return render(request,
-                    'service/template_create_course.html',
-                        {'course_form': course_form}
+                'service/add_course.html',
+                    {'course_form': course_form}
+                    )
+
+    else:
+        course_form = AddCourseForm(
+                        initial={'name': ' '}
                         )
+        return render(request,
+                'service/add_course.html',
+                {'course_form': course_form}
+                )
 
 
 class FocalUserViewSet(viewsets.ModelViewSet):

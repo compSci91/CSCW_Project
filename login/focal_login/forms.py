@@ -8,7 +8,7 @@ from django.db.models import DateTimeField
 from django import forms
 from .models import Course
 
-class CourseCreateForm(forms.ModelForm):
+class AddCourseForm(forms.ModelForm):
 
     class Meta:
         model = Course
